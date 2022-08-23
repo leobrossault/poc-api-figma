@@ -17,7 +17,6 @@ async function init() {
   const nodesIds = Object.keys(styles)
 
   const { nodes } = await fetchFigmaAPI({ endpoint: `/nodes?ids=${nodesIds.join(',')}` })
-  console.log(nodes)
 
   const formattedStyles = Object.entries(nodes).map(([key, style]) => {
     let value
